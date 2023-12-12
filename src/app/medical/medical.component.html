@@ -1,0 +1,98 @@
+<div class="form-container mt-3">
+    <div class="progress">
+        <div class="progress-bar bg-secondary" style="width:40%"></div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="col p-3 bg-light text-dark">
+                <img src="assets/box.jpg" alt="My Image" height="80px" width="80px">
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="col p-3 bg-light text-dark">The parties acknowledge that all records created, amended or
+                modified during
+                the fulfillment and course of this Agreement shall remain with the primary clinic or
+                with the relevant facility or authority and that the Contractor will have no
+                proprietary rights to any records and nor shall any records be removed other than
+                as required for the provision of care. </div>
+        </div>
+    </div>
+    <br>
+
+    <form [formGroup]="medicalForm" class="row g-3">
+
+        <div class=" col-md-6">
+            <label for="date" class="form-label" class="form-control">Diagnosis Date
+                <input type="date" id="date" name="date" value="" class="form-control is-valid" formControlName="date">
+                <i class="icon fas fa-calendar"></i>
+            </label>
+        </div>
+
+        <div class="col-md-6 ">
+
+            <label for="datemin" class="form-label" class="form-control">
+                Gender:
+                <br>
+
+                <label for="aaa" style="margin-right: 50px;">
+                    <select name="aaa" id="aaa" formControlName="datemin">
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                    <br><br>
+                </label>
+            </label>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" class="form-control is-invalid">Misdiagnosed GIST:
+                <br>
+                <input type="radio" formControlName="rose"><label for="rose">Yes</label>
+                <input type="radio" formControlName="lily"><label for="lily">No</label>
+                <br>
+            </label>
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="datemax" class="form-label" class="form-control is-valid">Date of First Symptoms:
+                <br>
+                <input type="date" id="datemax" name="datemax" max="05/12/2021" formControlName="datemax">
+            </label>
+        </div>
+
+        <div class="row container">
+            <div class="col-md-12">
+                <label class="form-label" class="form-control">Doctor Details:</label>
+                <label for="fn"><input type="text" style="margin-right: 20px; width: 250px; height: 50px;"
+                        formControlName="fn" placeholder="First Name">
+                </label>
+                <label for="ln"> <input type="text" style="margin-right: 20px; width: 250px; height: 50px;"
+                        formControlName="ln" placeholder="Last Name">
+                </label>
+                <label for="toggle" style="margin-right: 0px;">Is a doctor is specialist
+
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="toggleButton" formControlName="toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="toggle-label">Toggle Button</span>
+                    </div>
+                </label>
+
+            </div>
+
+        </div>
+
+        <div>
+            <span> <button class="center-button btn btn-warning"(click)="goToPersonal1()">Previous</button> </span>
+
+
+            <button class="center-button btn btn-success" style="margin-left: 80%;" (click)="medicaldata()">Next</button>
+
+        </div>
+    </form>
+</div>

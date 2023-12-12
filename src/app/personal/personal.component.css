@@ -1,0 +1,26 @@
+/* styles.css */
+
+.input-container {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+  }
+
+  .hii-container {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    display: flex;
+    width:100%;
+  }
+  .form-container {
+    border: 2px solid #000000;
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+
+  

@@ -1,0 +1,21 @@
+.right-bottom-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+  }
+  
+.form-container {
+  border: 2px solid #000000; /* Border color and thickness */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  padding: 20px; /* Optional: Add padding to the form */
+  margin-bottom: 20px; /* Optional: Add margin to the bottom for spacing */
+}
+.ani-container {
+  border: 2px solid #000000; /* Border color and thickness */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  padding: 20px; /* Optional: Add padding to the form */
+  margin-bottom: 20px;
+   margin-left: 3px;
+   /* margin-right: 50px; */
+}

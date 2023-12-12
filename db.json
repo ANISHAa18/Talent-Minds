@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "firstname": "poomika",
+      "lastname": "m",
+      "email": "poomika008@gmail.com",
+      "phone": "1234567890",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 1
+    }
+  ],
+  "info": [
+    {
+      "date": "2023-12-14",
+      "datemin": "F",
+      "datemax": "2023-12-12",
+      "fn": "",
+      "ln": "",
+      "toggle": "",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<div class="form-container mt-3">
+    <div class="progress">
+        <div class="progress-bar bg-secondary" style="width:20%"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="col p-3 bg-light text-dark">
+                <img src="assets/box.jpg" alt="My Image" height="80px" width="80px">
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="col p-3 bg-light text-dark">The parties acknowledge that all records created, amended or
+                modified during
+                the fulfillment and course of this Agreement shall remain with the primary clinic or
+                with the relevant facility or authority and that the Contractor will have no
+                proprietary rights to any records and nor shall any records be removed other than
+                as required for the provision of care. </div>
+        </div>
+    </div>
+    <br>
+
+    <form class="row g-3" [formGroup]="personalForm" (ngSubmit)="(this.personalForm.value)" novalidate>
+        <div class="col-md-6">
+
+            <label for="firstname" class="form-label">First name</label>
+            <input type="text" class="form-control is-valid" placeholder="Name" formControlName="firstname">
+            <span class="text-danger"
+                *ngIf="personalForm.get('firstname')?.invalid && personalForm.get('firstname')?.touched || personalForm.get('firstname')?.dirty">
+                <span [hidden]="!personalForm.get('firstname')?.hasError('required')">
+                    Username is invalid
+                </span>
+
+            </span>
+        </div>
+
+        <div class="col-md-6">
+            <label for="lastname" class="form-label">last name</label>
+            <input type="text" class="form-control is-valid" placeholder="Name" formControlName="lastname">
+            <span class="text-danger"
+                *ngIf="personalForm.get('lastname')?.invalid && personalForm.get('lastname')?.touched || personalForm.get('lastname')?.dirty">
+                <span [hidden]="!personalForm.get('lastname')?.hasError('required')">
+                    lastname is invalid
+                </span>
+
+            </span>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Email</label>
+            <input type="email" class="form-control is-valid" placeholder="Email" formControlName="email">
+            <span class="text-danger"
+                *ngIf="personalForm.get('email')?.hasError('required') && (personalForm.get('email')?.touched || personalForm.get('email')?.dirty)">
+                Email is required
+            </span>
+            <span class="text-danger"
+                *ngIf="personalForm.get('email')?.hasError('pattern') && (personalForm.get('email')?.touched || personalForm.get('email')?.dirty)">
+                Invalid email format
+            </span>
+        </div>
+
+        <div class="col-md-6">
+            <label for="phone" class="form-label">Phone number</label>
+            <input type="tel" class="form-control is-valid" placeholder="Phone number" maxlength="10"
+                formControlName="phone">
+            <span class="text-danger"
+                *ngIf="personalForm.get('phone')?.invalid && (personalForm.get('phone')?.touched || personalForm.get('phone')?.dirty)">
+                <span [hidden]="!personalForm.get('phone')?.hasError('required')">
+                    Phone number is required
+                </span>
+            </span>
+        </div>
+        <div class="col mt-5 container-fluid">
+
+            <div class="row hii-container p-3 m-0">
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control is-valid" placeholder="Enter the Password"
+                        formControlName="password">
+
+                    <span class="text-danger"
+                        *ngIf="personalForm.get('password')?.invalid && (personalForm.get('password')?.touched || personalForm.get('password')?.dirty)">
+                        <span [hidden]="!personalForm.get('password')?.hasError('required')">
+                            Password is required
+                        </span>
+                        <span [hidden]="!personalForm.get('password')?.hasError('minlength')">
+                            Password should be at least 8 characters long
+                        </span>
+                    </span>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control is-valid" placeholder="Enter the Password"
+                        formControlName="confirmPassword">
+
+                    <span class="text-danger"
+                        *ngIf="personalForm.get('confirmPassword')?.invalid && (personalForm.get('confirmPassword')?.touched || personalForm.get('confirmPassword')?.dirty)">
+                        <span [hidden]="!personalForm.get('confirmPassword')?.hasError('required')">
+                            Confirm Password is required
+                        </span>
+                        <span [hidden]="!personalForm.get('confirmPassword')?.hasError('minlength')">
+                            Confirm Password should be at least 8 characters long
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <span><button class="center-button btn btn-success" style="margin-left: 45%;" (click)="postdata()"
+                [disabled]="!personalForm.valid">Next</button></span>
+    </form>
+    
+</div>

@@ -1,0 +1,65 @@
+<div class="form-container mt-3">
+
+    <div class="progress">
+        <div class="progress-bar bg-secondary" style="width:100%"></div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="col p-3 bg-light text-dark">
+                <img src="assets/box.jpg" alt="My Image" height="80px" width="80px">
+            </div>
+        </div>
+
+        <div class="col-md-10 d-flex align-items-center justify-content-center">
+            <div class="col p-3 bg-light text-dark text-center">
+                <h1><strong>REGISTRATION COMPLETED</strong></h1>
+                <br>
+            </div>
+            <br>
+        </div>
+        <br><br>
+
+<div><br>
+        <div class="row ani-container">
+
+            <table class="table ">
+                <tr *ngFor="let data of datas">
+
+                    <th>firstname:</th>
+                    <td>{{data.firstname}}</td>
+                    <th>lastname:</th>
+                    <td>{{data.lastname}}</td>
+
+                </tr>
+
+                <tr *ngFor="let data of datas">
+
+                    <th>email:</th>
+                    <td>{{data.email}}</td>
+                    <th>phone:</th>
+                    <td>{{data.phone}}</td>
+
+                </tr>
+            </table>
+            <br>
+            <table class="table ">
+                <tr *ngFor="let item of items">
+
+                    <th>date:</th>
+                    <td>{{item.date}}</td>
+
+                </tr>
+            </table>
+        </div>
+</div>
+
+        <div>
+            <!-- Log In Button -->
+            <span><button class="center-button btn btn-success" (click)="login()">Go to Log In</button></span>
+
+            <!-- Close Button -->
+            <span><button class="center-button btn btn-danger" style="margin-left: 80%;" (click)="closePage()">Close</button></span>
+        </div>
+    </div>
